@@ -229,6 +229,21 @@ class BST :
             current = current.right
         return current
     
+    def isValidBST(self):
+        return self._isValidBST(self.root, float('-inf'), float('inf'))
+    
+    def _isValidBST(self, node, lower, upper):
+        if not node:
+            return True
+        val = node.val
+        if val <= lower or val >= upper:
+            return False
+        if not self._isValidBST(node.right, val, upper):
+            return False
+        if not self._isValidBST(node.left, lower, val):
+            return False
+        return True
+    
     def inorder(self):
 
         self._inorder(self.root)
@@ -258,13 +273,15 @@ if __name__ == "__main__" :
     print("\nFound : "+str(bst.search(1)))
 
 
-    bst.delete(3)
+    bst.delete(1)
     print("After Deletion : ",end=" ")
 
     bst.inorder()
     print("\n")
     print("Minimum : " + str(bst.find_min()))
     print("maximum : " + str(bst.find_max())) 
+    
+    print(bst.isValidBST())
     
 
 
