@@ -48,9 +48,7 @@ class VacuumCleanerEnvironment:
             print(f'Location status: {self.location_status}')
 
 
-# Create an instance of the agent and the environment
 agent = VacuumCleanerAgent()
 env = VacuumCleanerEnvironment()
 
-# Run the environment with the agent
 env.run(agent)
