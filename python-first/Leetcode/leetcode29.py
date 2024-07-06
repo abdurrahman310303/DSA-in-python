@@ -10,6 +10,7 @@ class Solution:
         dividend, divisor = abs(dividend), abs(divisor)
 
         quotient = 0
+        
         while dividend >= divisor:
      
             multiple = 1
@@ -27,6 +28,6 @@ class Solution:
 
 sol = Solution()
 
-result = sol.divide(7,-3)
+result = sol.divide(200,2)
 
 print (str(result))
