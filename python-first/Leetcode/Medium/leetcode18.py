@@ -24,3 +24,4 @@ target = 4
 res = SUM(inputNums,target)
 
 print(f"The result is {res}")
+

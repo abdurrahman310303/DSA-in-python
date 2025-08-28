@@ -1,0 +1,2 @@
+def removeCOnsecutiveDups(s):
+    pass
